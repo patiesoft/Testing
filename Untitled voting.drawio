@@ -1,1 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2021-03-05T18:50:55.571Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Safari/537.36" version="14.4.3" etag="d4nhzVZdIt1TlpJitZmp" type="github"><diagram id="6-u_m4VkcU3N5l9_vCeo">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-03-05T19:28:36.443Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Safari/537.36" etag="VApM4THG49dM1BHuavN8" version="14.4.3" type="github">
+  <diagram id="6-u_m4VkcU3N5l9_vCeo" name="Page-1">
+    <mxGraphModel dx="2062" dy="1170" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B3r4t2wdV4ijAQreDRim-1" value="students" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=17;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="330" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-2" value="+ student_id:  PK varchat(9) NOT NULL&#xa;+ name: varchar(255) NOT NULL&#xa;+ surname: varchar(255) NOT NULL&#xa;+ sign_up_date: date NOT NULL&#xa;+ password: varchar(255) NOT NULL" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=15;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="B3r4t2wdV4ijAQreDRim-1">
+          <mxGeometry y="30" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-3" value="admins" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=17;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="550" width="310" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-4" value="+ admin_id: PK Auto Generated NOT NULL&#xa;+ name: varchar(255) NOT NULL&#xa;+ surname: varchar(255) NOT NULL&#xa;+ password: varchar(255) NOT NULL&#xa;+ email: varchar(255) NOT NULL" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=15;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="B3r4t2wdV4ijAQreDRim-3">
+          <mxGeometry y="30" width="310" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-6" value="elections" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=17;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="770" width="440" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-7" value="+ election_id:  PK varchat(255) AUTO GENERATED NOT NULL&#xa;+ admin_id: PK FK varchar(255) NOT NULL&#xa;+ start_date: date NOT NULL&#xa;+ end_date: date NOT NULL&#xa;+ description: varchar(255)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=15;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="B3r4t2wdV4ijAQreDRim-6">
+          <mxGeometry y="30" width="440" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-8" value="candidate" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=17;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="90" y="960" width="470" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-9" value="+ candidate_id: PK varchar(255) AUTO GENERATED NOT NULL&#xa;+ student_id:  PK FK varchat(9) NOT NULL&#xa;+ portfolio_Id: PK FK varchar(255) NOT NULL&#xa;+ slogan: varchar(255) NOT NULL&#xa;+ election_id: PK FK varchar(255) NOT NULL&#xa;+ admin_Id: PK FK varchar(255) NOT NULL&#xa;+ adding_date: date NOT NULL&#xa;+ votes: integer" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=15;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="B3r4t2wdV4ijAQreDRim-8">
+          <mxGeometry y="30" width="470" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-10" value="portfolios" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=17;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="360" width="520" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="B3r4t2wdV4ijAQreDRim-11" value="+ portfolio_id: PK AUTO GENERATED varchar(255) NOT NULL&#xa;+ description: varchar(255)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=15;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="B3r4t2wdV4ijAQreDRim-10">
+          <mxGeometry y="30" width="520" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
